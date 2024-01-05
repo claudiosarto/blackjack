@@ -14,10 +14,25 @@ main{
 body {
     margin: 0;
     padding: 0;
+    margin-top: 2rem;
     font-family: "Pirata One", sans-serif;
     font-size: 3rem;
     color: #3C382C;
+    text-align: center;
     display:flex;
     flex-direction: column;
     background-color: #797567;
 }
+
+header {
+    font-size: 5rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #B0ADA2;
+}
+
+main{
+    padding-top: 5rem;
+}
+
