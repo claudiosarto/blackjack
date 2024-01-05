@@ -25,6 +25,16 @@ body {
     flex-direction: column;
     background-color: #797567;
 }
+
+.buttons {
+    font-family: "Pirata One", sans-serif;
+    font-size: 3rem;
+    background-color: #B0ADA2;
+    border-color: #3C382C;
+    margin:1rem;
+    padding:1rem;
+    border-radius: 1rem;
+}
 /* End of Main Content */
 
 /* Header */
