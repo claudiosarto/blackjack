@@ -15,8 +15,13 @@ window.onload = function() {
     mainFunction();
 }
 
-function mainFunction(){   
-    deck = buildDeck();
-    console.log(deck);
+function mainFunction() {   
+    let dealerSum = 0;
+    let playerSum = 0;
+    let deck = buildDeck();
+    //console.log(deck);
 }
 
+
+
+// pick random card from deck: deck.splice([Math.floor(Math.random()*deck.length)],1); 
