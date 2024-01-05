@@ -1,0 +1,23 @@
+/* Import fonts */
+  @import url('https://fonts.googleapis.com/css2?family=Pirata+One&display=swap');
+
+/* Common styles*/
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+main{
+    min-height: 100vh;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Pirata One", sans-serif;
+    font-size: 3rem;
+    color: #3C382C;
+    display:flex;
+    flex-direction: column;
+    background-color: #797567;
+}
