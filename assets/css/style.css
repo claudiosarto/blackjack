@@ -18,21 +18,25 @@ body {
     padding: 0;
     margin-top: 2rem;
     font-family: "Pirata One", sans-serif;
-    font-size: 3rem;
+    font-size: 2rem;
     color: #3C382C;
     text-align: center;
     display:flex;
     flex-direction: column;
     background-color: #797567;
 }
+/* End of Main Content */
 
+/* Header */
 .header {
     font-size: 5rem;
+    color: #3C382C;
     position: fixed;
     top: 0;
     width: 100%;
     background-color: #B0ADA2;
 }
+/* End Of Header */
 
 /* footer */
 .footer {
