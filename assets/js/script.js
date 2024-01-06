@@ -155,5 +155,8 @@ function restart(){
     playerCanHit = true; 
     dealerCanHit = true;
     displayResult = false; 
+    document.getElementById("dealer-score").innerHTML="";
+    document.getElementById("player-score").innerHTML="";
+    document.getElementById("results").innerHTML="";
     mainFunction();
 }
