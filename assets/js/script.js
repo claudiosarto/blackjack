@@ -85,6 +85,7 @@ function hit(){
     document.getElementById("player-cards").append(playerCard);
     if (playerSum > 21){
         playerCanHit = false;
+        // call stay function as the game ends
         stay();
     };
     //debugger
@@ -116,6 +117,7 @@ function stay(){
         gameResult = "Player Win!";
     }  
     
+    // Check to avoid multiple clicks on stay
     if (displayResult===false){
         document.getElementById("dealer-score").append("Dealer Score: " + dealerSum);
         document.getElementById("player-score").append("Player Score: " + playerSum);
@@ -140,14 +142,17 @@ function dealerHit(){
 }
 
 function restart(){
+    // clean dealer cards area except for dealerHidden element
     let cleaner = document.getElementById("dealer-cards");
     while (cleaner.lastChild.id !== 'dealerHidden') {
         cleaner.removeChild(cleaner.lastChild);
     }
+    // clean player cards area
     cleaner = document.getElementById("player-cards")
     while (cleaner.hasChildNodes()) {
         cleaner.removeChild(cleaner.lastChild);
     }
+    // reset all the variable used
     deck = buildDeck();
     dealerSum = 0;
     playerSum = 0;
@@ -155,6 +160,7 @@ function restart(){
     playerCanHit = true; 
     dealerCanHit = true;
     displayResult = false; 
+    // reset score and result area
     document.getElementById("dealer-score").innerHTML="";
     document.getElementById("player-score").innerHTML="";
     document.getElementById("results").innerHTML="";
