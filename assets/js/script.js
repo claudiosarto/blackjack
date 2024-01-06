@@ -3,7 +3,7 @@ let deck = buildDeck();
 let dealerSum = 0;
 let playerSum = 0;
 let dealerHidden;
-let canHit = true; // set parameter to check if player has sum >21
+let playerCanHit = true; // set parameter to check if player has sum >21
 //let dealerAces = 0;
 //let playerAces = 0;
 
@@ -75,7 +75,7 @@ function getCardValue(card){
 }
 
 function hit(){
-    if (canHit == false){
+    if (playerCanHit == false){
         return
     };
     let playerCard = document.createElement("img");
@@ -84,13 +84,14 @@ function hit(){
     playerSum += getCardValue(card);
     document.getElementById("player-cards").append(playerCard);
     if (playerSum > 21){
-        canHit = false;
+        playerCanHit = false;
         stay();
     };
     //debugger
 }
 
 function stay(){
+    document.getElementById("dealerHidden").src = "./assets/images/" + dealerHidden + ".webp";
     document.getElementById("dealer-score").append("Dealer Score: " + dealerSum);
     document.getElementById("player-score").append("Player Score: " + playerSum);
 }
