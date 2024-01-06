@@ -33,6 +33,11 @@ function mainFunction() {
         document.getElementById("player-cards").append(playerCardImg);
     }
     console.log("Player Sum: " + playerSum);
+
+    document.getElementById("btn-hit").addEventListener("click", hit.bind(null,playerSum,deck));
+    
+    //document.getElementById("btn-stay").addEventListener("click", stay);
+
     //console.log(deck);
     //debugger
 }
@@ -68,6 +73,14 @@ function getCardValue(card){
     }
 }
 
-
-
+function hit(sum,deck){
+    let playerCard = document.createElement("img");
+    let card = deck.splice([Math.floor(Math.random() * deck.length)],1);
+    console.log("Hit Fucntion card " + card);
+    console.log("Hit Fucntion deck " + deck);
+    playerCard.src = "./assets/images/" + card + ".webp";
+    sum += getCardValue(card);
+    document.getElementById("player-cards").append(playerCard);
+    //debugger
+}
 
