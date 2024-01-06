@@ -1,17 +1,20 @@
+// Build Deck
+let deck = buildDeck();
+let dealerSum = 0;
+let playerSum = 0;
+let dealerHidden;
+//let dealerAces = 0;
+//let playerAces = 0;
+
 window.onload = function() {
     mainFunction();
 }
 
 function mainFunction() {   
-    let dealerSum = 0;
-    let playerSum = 0;
-    let dealerAces = 0;
-    let playerAces = 0;
-    // Build Deck
-    let deck = buildDeck();
+    
     //console.log(deck);    
     // Pick Dealer Hidden Card and add to Dealer sum
-    let dealerHidden = deck.splice([Math.floor(Math.random() * deck.length)],1);
+    dealerHidden = deck.splice([Math.floor(Math.random() * deck.length)],1);
     dealerSum += getCardValue(dealerHidden);
     console.log("Dealer Hidden: " + dealerHidden);
     console.log("Dealer Sum: " + dealerSum);
@@ -34,10 +37,8 @@ function mainFunction() {
     }
     console.log("Player Sum: " + playerSum);
 
-    document.getElementById("btn-hit").addEventListener("click", hit.bind(null,playerSum,deck));
-    
-    //document.getElementById("btn-stay").addEventListener("click", stay);
-
+    document.getElementById("btn-hit").addEventListener("click", hit);    
+    document.getElementById("btn-stay").addEventListener("click", stay);
     //console.log(deck);
     //debugger
 }
@@ -73,14 +74,17 @@ function getCardValue(card){
     }
 }
 
-function hit(sum,deck){
+function hit(){
     let playerCard = document.createElement("img");
     let card = deck.splice([Math.floor(Math.random() * deck.length)],1);
     console.log("Hit Fucntion card " + card);
     console.log("Hit Fucntion deck " + deck);
     playerCard.src = "./assets/images/" + card + ".webp";
-    sum += getCardValue(card);
+    playerSum += getCardValue(card);
     document.getElementById("player-cards").append(playerCard);
     //debugger
 }
 
+function stay(){
+    console.log(playerSum);
+}
