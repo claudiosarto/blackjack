@@ -26,6 +26,10 @@ body {
     background-color: #797567;
 }
 
+h1 {
+    font-size: 2.5rem;
+}
+
 body img {
     width: 20vw;
     padding: .5rem;
