@@ -24,9 +24,15 @@ function mainFunction() {
     dealerVisibleImg.src = "./assets/images/" + dealerVisible + ".webp";
     document.getElementById("dealer-cards").append(dealerVisibleImg);
 
-    //
-
-
+    // Pick Player Cards
+    for (let i = 0; i < 2; i++) {
+        let playerCardImg = document.createElement("img");
+        let playerCard = deck.splice([Math.floor(Math.random() * deck.length)],1);;
+        playerCardImg.src = "./assets/images/" + playerCard + ".webp";
+        playerSum += getCardValue(playerCard);
+        document.getElementById("player-cards").append(playerCardImg);
+    }
+    console.log("Player Sum: " + playerSum);
     //console.log(deck);
     //debugger
 }
