@@ -3,6 +3,7 @@ let deck = buildDeck();
 let dealerSum = 0;
 let playerSum = 0;
 let dealerHidden;
+let canHit = true; // set parameter to check if player has sum >21
 //let dealerAces = 0;
 //let playerAces = 0;
 
@@ -10,8 +11,7 @@ window.onload = function() {
     mainFunction();
 }
 
-function mainFunction() {   
-    
+function mainFunction() {       
     //console.log(deck);    
     // Pick Dealer Hidden Card and add to Dealer sum
     dealerHidden = deck.splice([Math.floor(Math.random() * deck.length)],1);
@@ -75,16 +75,22 @@ function getCardValue(card){
 }
 
 function hit(){
+    if (canHit == false){
+        return
+    };
     let playerCard = document.createElement("img");
     let card = deck.splice([Math.floor(Math.random() * deck.length)],1);
-    console.log("Hit Fucntion card " + card);
-    console.log("Hit Fucntion deck " + deck);
     playerCard.src = "./assets/images/" + card + ".webp";
     playerSum += getCardValue(card);
     document.getElementById("player-cards").append(playerCard);
+    if (playerSum > 21){
+        canHit = false
+    };
     //debugger
 }
 
 function stay(){
     console.log(playerSum);
 }
+
+
