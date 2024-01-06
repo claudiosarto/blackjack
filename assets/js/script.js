@@ -37,7 +37,7 @@ function mainFunction() {
     }
     console.log("Player Sum: " + playerSum);
 
-    document.getElementById("btn-hit").addEventListener("click", hit);    
+    document.getElementById("btn-hit").addEventListener("click", hit);
     document.getElementById("btn-stay").addEventListener("click", stay);
     //console.log(deck);
     //debugger
