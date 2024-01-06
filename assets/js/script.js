@@ -13,11 +13,20 @@ function mainFunction() {
     // Pick Dealer Hidden Card and add to Dealer sum
     let dealerHidden = deck.splice([Math.floor(Math.random() * deck.length)],1);
     dealerSum += getCardValue(dealerHidden);
-    console.log(dealerHidden);
-    console.log(dealerSum);
+    console.log("Dealer Hidden: " + dealerHidden);
+    console.log("Dealer Sum: " + dealerSum);
 
     // Pick Dealer Visible Card and put it on the play area
-    //let 
+    let dealerVisible = deck.splice([Math.floor(Math.random() * deck.length)],1);
+    dealerSum += getCardValue(dealerVisible);
+    console.log("Dealer Sum: " + dealerSum);
+    let dealerVisibleImg = document.createElement("img");
+    dealerVisibleImg.src = "./assets/images/" + dealerVisible + ".webp";
+    document.getElementById("dealer-cards").append(dealerVisibleImg);
+
+    //
+
+
     //console.log(deck);
     //debugger
 }
