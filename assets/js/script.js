@@ -140,12 +140,20 @@ function dealerHit(){
 }
 
 function restart(){
+    let cleaner = document.getElementById("dealer-cards");
+    while (cleaner.lastChild.id !== 'dealerHidden') {
+        cleaner.removeChild(cleaner.lastChild);
+    }
+    cleaner = document.getElementById("player-cards")
+    while (cleaner.hasChildNodes()) {
+        cleaner.removeChild(cleaner.lastChild);
+    }
     let deck = buildDeck();
     let dealerSum = 0;
     let playerSum = 0;
     let dealerHidden;
-    let playerCanHit = true; // set parameter to check if player has sum >21
-    let dealerCanHit = true; // set parameter to check if dealer has sum >21
-    let displayResult = false; // set parameter to check if result for displaying current game
+    let playerCanHit = true; 
+    let dealerCanHit = true;
+    let displayResult = false; 
     mainFunction();
 }
