@@ -26,6 +26,10 @@ body {
     background-color: #797567;
 }
 
+body img {
+    width: 20vw;
+}
+
 .buttons {
     font-family: "Pirata One", sans-serif;
     font-size: 3rem;

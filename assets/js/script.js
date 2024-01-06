@@ -9,7 +9,8 @@ function mainFunction() {
     let playerAces = 0;
     let deck = buildDeck();
     //console.log(deck);    
-    let dealerHidden = deck.splice([Math.floor(Math.random()*deck.length)],1);
+    let dealerHidden = deck.splice([Math.floor(Math.random() * deck.length)],1);
+    debugger
 
 
     //console.log(dealerHidden);
@@ -33,7 +34,7 @@ function buildDeck(){
 function getCardValue(card){
     let data = card.split("-"); // get digits before "-"  
     
-    // return related value based on digit  
+    // return related value based on digits before "-"
     switch(data[0]){
         case "a":
             return 11;
