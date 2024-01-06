@@ -15,22 +15,22 @@ window.onload = function() {
 
 function mainFunction() {     
     document.getElementById("btn-restart").style.display = 'none';  
-    //console.log(deck);    
+  
     // Pick Dealer Hidden Card and add to Dealer sum
     dealerHidden = deck.splice([Math.floor(Math.random() * deck.length)],1);
     dealerSum += getCardValue(dealerHidden);
-    //console.log("Dealer Hidden: " + dealerHidden);
-    //console.log("Dealer Sum: " + dealerSum);
+
+    // Update Dealer hidden card image src
+    document.getElementById("dealerHidden").src = "./assets/images/cardback.webp";
 
     // Pick Dealer Visible Card and put it on the play area
     let dealerVisible = deck.splice([Math.floor(Math.random() * deck.length)],1);
     dealerSum += getCardValue(dealerVisible);
-    //console.log("Dealer Sum: " + dealerSum);
     let dealerVisibleImg = document.createElement("img");
     dealerVisibleImg.src = "./assets/images/" + dealerVisible + ".webp";
     document.getElementById("dealer-cards").append(dealerVisibleImg);
 
-    // Pick Player Cards
+    // Pick 2 Player Cards
     for (let i = 0; i < 2; i++) {
         let playerCardImg = document.createElement("img");
         let playerCard = deck.splice([Math.floor(Math.random() * deck.length)],1);;
@@ -38,8 +38,6 @@ function mainFunction() {
         playerSum += getCardValue(playerCard);
         document.getElementById("player-cards").append(playerCardImg);
     }
-    //console.log("Player Sum: " + playerSum);
-
     document.getElementById("btn-hit").addEventListener("click", hit);
     document.getElementById("btn-stay").addEventListener("click", stay);
     document.getElementById("btn-restart").addEventListener("click", restart);
@@ -142,4 +140,12 @@ function dealerHit(){
 }
 
 function restart(){
+    let deck = buildDeck();
+    let dealerSum = 0;
+    let playerSum = 0;
+    let dealerHidden;
+    let playerCanHit = true; // set parameter to check if player has sum >21
+    let dealerCanHit = true; // set parameter to check if dealer has sum >21
+    let displayResult = false; // set parameter to check if result for displaying current game
+    mainFunction();
 }
