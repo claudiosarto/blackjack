@@ -5,6 +5,7 @@ let playerSum = 0;
 let dealerHidden;
 let playerCanHit = true; // set parameter to check if player has sum >21
 let dealerCanHit = true; // set parameter to check if dealer has sum >21
+let displayResult = false; // set parameter to check if result for displaying current game
 //let dealerAces = 0;
 //let playerAces = 0;
 
@@ -99,18 +100,28 @@ function stay(){
         dealerHit();
     }  
 
-    switch (true) {
-        case (playerSum>21):
-            console.log("player >21 lose");
-        case (dealerSum<17):          
-            console.log("dealer hit");
-
-        default: 
-            break;
+    // Checking scores:
+    if (playerSum>21){
+        console.log("Player >21 lose");
+    } 
+    else if (dealerSum > 21){
+        console.log("Dealer >21, player win");
+    } 
+    else if (dealerSum == playerSum){
+        console.log("Tie");
+    }
+    else if (dealerSum > playerSum){
+        console.log("Dealer Win");
+    }
+    else if (dealerSum == playerSum){
+        console.log("Player Win");
+    }  
+    
+    if (displayResult===false){
+        document.getElementById("dealer-score").append("Dealer Score: " + dealerSum);
+        document.getElementById("player-score").append("Player Score: " + playerSum);
+        displayResult=true;
     }   
-
-    document.getElementById("dealer-score").append("Dealer Score: " + dealerSum);
-    document.getElementById("player-score").append("Player Score: " + playerSum);
 }
 
 function dealerHit(){
