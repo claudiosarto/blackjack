@@ -148,12 +148,12 @@ function restart(){
     while (cleaner.hasChildNodes()) {
         cleaner.removeChild(cleaner.lastChild);
     }
-    let deck = buildDeck();
-    let dealerSum = 0;
-    let playerSum = 0;
-    let dealerHidden;
-    let playerCanHit = true; 
-    let dealerCanHit = true;
-    let displayResult = false; 
+    deck = buildDeck();
+    dealerSum = 0;
+    playerSum = 0;
+    dealerHidden = "";
+    playerCanHit = true; 
+    dealerCanHit = true;
+    displayResult = false; 
     mainFunction();
 }
