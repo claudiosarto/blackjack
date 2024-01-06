@@ -113,7 +113,7 @@ function stay(){
     else if (dealerSum > playerSum){
         gameResult = "Player Lose!";
     }
-    else if (dealerSum == playerSum){
+    else if (dealerSum < playerSum){
         gameResult = "Player Win!";
     }  
     
