@@ -11,7 +11,7 @@ let displayResult = false; // set parameter to check if result for displaying cu
 
 window.onload = function() {
     mainFunction();
-}
+};
 
 function mainFunction() {     
     document.getElementById("btn-restart").style.display = 'none';  
@@ -33,7 +33,7 @@ function mainFunction() {
     // Pick 2 Player Cards
     for (let i = 0; i < 2; i++) {
         let playerCardImg = document.createElement("img");
-        let playerCard = deck.splice([Math.floor(Math.random() * deck.length)],1);;
+        let playerCard = deck.splice([Math.floor(Math.random() * deck.length)],1);
         playerCardImg.src = "./assets/images/" + playerCard + ".webp";
         playerSum += getCardValue(playerCard);
         document.getElementById("player-cards").append(playerCardImg);
@@ -76,8 +76,8 @@ function getCardValue(card){
 
 function hit(){
     if (playerCanHit == false){
-        return
-    };
+        return;
+    }
     let playerCard = document.createElement("img");
     let card = deck.splice([Math.floor(Math.random() * deck.length)],1);
     playerCard.src = "./assets/images/" + card + ".webp";
@@ -87,7 +87,7 @@ function hit(){
         playerCanHit = false;
         // call stay function as the game ends
         stay();
-    };
+    }
     //debugger
 }
 
@@ -129,8 +129,8 @@ function stay(){
 
 function dealerHit(){
     if (dealerCanHit == false){
-        return
-    };
+        return;
+    }
     let dealerCard = document.createElement("img");
     let card = deck.splice([Math.floor(Math.random() * deck.length)],1);
     dealerCard.src = "./assets/images/" + card + ".webp";
@@ -138,7 +138,7 @@ function dealerHit(){
     document.getElementById("dealer-cards").append(dealerCard);
     if (dealerSum > 21){
         dealerCanHit = false;
-    };
+    }
 }
 
 function restart(){
@@ -148,7 +148,7 @@ function restart(){
         cleaner.removeChild(cleaner.lastChild);
     }
     // clean player cards area
-    cleaner = document.getElementById("player-cards")
+    cleaner = document.getElementById("player-cards");
     while (cleaner.hasChildNodes()) {
         cleaner.removeChild(cleaner.lastChild);
     }
