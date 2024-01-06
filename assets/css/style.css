@@ -52,6 +52,14 @@ body img {
     width: 100%;
     background-color: #B0ADA2;
 }
+
+#rules{
+    color: #3C382C;
+    font-size: 3rem;
+    position: fixed;
+    top: 1.8rem;
+    right: 1.5rem;    
+}
 /* End Of Header */
 
 /* footer */
