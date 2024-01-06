@@ -18,13 +18,13 @@ function mainFunction() {
     // Pick Dealer Hidden Card and add to Dealer sum
     dealerHidden = deck.splice([Math.floor(Math.random() * deck.length)],1);
     dealerSum += getCardValue(dealerHidden);
-    console.log("Dealer Hidden: " + dealerHidden);
-    console.log("Dealer Sum: " + dealerSum);
+    //console.log("Dealer Hidden: " + dealerHidden);
+    //console.log("Dealer Sum: " + dealerSum);
 
     // Pick Dealer Visible Card and put it on the play area
     let dealerVisible = deck.splice([Math.floor(Math.random() * deck.length)],1);
     dealerSum += getCardValue(dealerVisible);
-    console.log("Dealer Sum: " + dealerSum);
+    //console.log("Dealer Sum: " + dealerSum);
     let dealerVisibleImg = document.createElement("img");
     dealerVisibleImg.src = "./assets/images/" + dealerVisible + ".webp";
     document.getElementById("dealer-cards").append(dealerVisibleImg);
@@ -37,12 +37,10 @@ function mainFunction() {
         playerSum += getCardValue(playerCard);
         document.getElementById("player-cards").append(playerCardImg);
     }
-    console.log("Player Sum: " + playerSum);
+    //console.log("Player Sum: " + playerSum);
 
     document.getElementById("btn-hit").addEventListener("click", hit);
     document.getElementById("btn-stay").addEventListener("click", stay);
-    //console.log(deck);
-    //debugger
 }
 
 function buildDeck(){
@@ -101,25 +99,27 @@ function stay(){
     }  
 
     // Checking scores:
+    let gameResult="";
     if (playerSum>21){
-        console.log("Player >21 lose");
+        gameResult = "Player lose!";
     } 
     else if (dealerSum > 21){
-        console.log("Dealer >21, player win");
+        gameResult = "Player Win!";
     } 
     else if (dealerSum == playerSum){
-        console.log("Tie");
+        gameResult = "It's a Tie!";
     }
     else if (dealerSum > playerSum){
-        console.log("Dealer Win");
+        gameResult = "Player Lose!";
     }
     else if (dealerSum == playerSum){
-        console.log("Player Win");
+        gameResult = "Player Win!";
     }  
     
     if (displayResult===false){
         document.getElementById("dealer-score").append("Dealer Score: " + dealerSum);
         document.getElementById("player-score").append("Player Score: " + playerSum);
+        document.getElementById("results").append(gameResult);
         displayResult=true;
     }   
 }
