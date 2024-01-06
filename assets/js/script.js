@@ -84,13 +84,15 @@ function hit(){
     playerSum += getCardValue(card);
     document.getElementById("player-cards").append(playerCard);
     if (playerSum > 21){
-        canHit = false
+        canHit = false;
+        stay();
     };
     //debugger
 }
 
 function stay(){
-    console.log(playerSum);
+    document.getElementById("dealer-score").append("Dealer Score: " + dealerSum);
+    document.getElementById("player-score").append("Player Score: " + playerSum);
 }
 
 
