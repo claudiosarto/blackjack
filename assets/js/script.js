@@ -7,15 +7,19 @@ function mainFunction() {
     let playerSum = 0;
     let dealerAces = 0;
     let playerAces = 0;
+    // Build Deck
     let deck = buildDeck();
     //console.log(deck);    
+    // Pick Dealer Hidden Card and add to Dealer sum
     let dealerHidden = deck.splice([Math.floor(Math.random() * deck.length)],1);
-    debugger
+    dealerSum += getCardValue(dealerHidden);
+    console.log(dealerHidden);
+    console.log(dealerSum);
 
-
-    //console.log(dealerHidden);
+    // Pick Dealer Visible Card and put it on the play area
+    //let 
     //console.log(deck);
-    ;
+    //debugger
 }
 
 function buildDeck(){
@@ -32,7 +36,7 @@ function buildDeck(){
 }
 
 function getCardValue(card){
-    let data = card.split("-"); // get digits before "-"  
+    let data = card[0].split("-"); // get digits before "-"  
     
     // return related value based on digits before "-"
     switch(data[0]){
@@ -47,5 +51,8 @@ function getCardValue(card){
         default:
             return parseInt(data[0]); 
     }
-
 }
+
+
+
+
