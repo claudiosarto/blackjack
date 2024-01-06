@@ -13,7 +13,8 @@ window.onload = function() {
     mainFunction();
 }
 
-function mainFunction() {       
+function mainFunction() {     
+    document.getElementById("btn-restart").style.display = 'none';  
     //console.log(deck);    
     // Pick Dealer Hidden Card and add to Dealer sum
     dealerHidden = deck.splice([Math.floor(Math.random() * deck.length)],1);
@@ -41,6 +42,7 @@ function mainFunction() {
 
     document.getElementById("btn-hit").addEventListener("click", hit);
     document.getElementById("btn-stay").addEventListener("click", stay);
+    document.getElementById("btn-restart").addEventListener("click", restart);
 }
 
 function buildDeck(){
@@ -120,6 +122,7 @@ function stay(){
         document.getElementById("dealer-score").append("Dealer Score: " + dealerSum);
         document.getElementById("player-score").append("Player Score: " + playerSum);
         document.getElementById("results").append(gameResult);
+        document.getElementById("btn-restart").style.display = '';
         displayResult=true;
     }   
 }
@@ -136,4 +139,7 @@ function dealerHit(){
     if (dealerSum > 21){
         dealerCanHit = false;
     };
+}
+
+function restart(){
 }
