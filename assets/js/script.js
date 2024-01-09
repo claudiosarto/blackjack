@@ -1,13 +1,16 @@
 // Build Deck
 let deck = buildDeck();
-let dealerSum = 0;
-let playerSum = 0;
 let dealerHidden;
-let playerCanHit = true; // set parameter to check if player has sum >21
+
+let dealerSum = 0;
+let dealerAces = 0;
 let dealerCanHit = true; // set parameter to check if dealer has sum >21
+
+let playerSum = 0;
+let playerAces = 0;
+let playerCanHit = true; // set parameter to check if player has sum >21
+
 let displayResult = false; // set parameter to check if result for displaying current game
-//let dealerAces = 0;
-//let playerAces = 0;
 
 window.onload = function() {
     mainFunction();
@@ -36,9 +39,11 @@ function mainFunction() {
         let playerCard = deck.splice([Math.floor(Math.random() * deck.length)],1);
         playerCardImg.src = "./assets/images/" + playerCard + ".webp";
         playerSum += getCardValue(playerCard);
+        playerAces += checkCardForAce(playerCard);
+        console.log("Player Aces:" + playerAces);
         document.getElementById("player-cards").append(playerCardImg);
     }
-    document.getElementById("btn-hit").addEventListener("click", hit);
+    document.getElementById("btn-hit").addEventListener("click", playerHit);
     document.getElementById("btn-stay").addEventListener("click", stay);
     document.getElementById("btn-restart").addEventListener("click", restart);
 }
@@ -74,7 +79,7 @@ function getCardValue(card){
     }
 }
 
-function hit(){
+function playerHit(){
     if (playerCanHit == false){
         return;
     }
@@ -82,6 +87,8 @@ function hit(){
     let card = deck.splice([Math.floor(Math.random() * deck.length)],1);
     playerCard.src = "./assets/images/" + card + ".webp";
     playerSum += getCardValue(card);
+    playerAces += checkCardForAce(card);
+    console.log("Player Aces:" + playerAces);
     document.getElementById("player-cards").append(playerCard);
     if (playerSum > 21){
         playerCanHit = false;
@@ -91,11 +98,21 @@ function hit(){
     //debugger
 }
 
+function checkCardForAce(card){
+    let data = card[0].split("-"); // get digits before "-"  
+    if (data[0] == "a"){
+        return 1;
+    } else {
+        return 0;
+    }
+    
+}
+
 function stay(){
     playerCanHit = false;
     document.getElementById("dealerHidden").src = "./assets/images/" + dealerHidden + ".webp";
     // Dealer must have at least 17
-    while (dealerSum<17) {
+    while (dealerSum < 17) {
         dealerHit();
     }  
 
