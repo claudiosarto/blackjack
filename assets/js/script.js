@@ -55,6 +55,8 @@ function mainFunction() {
     document.getElementById("btn-stay").addEventListener("click", stay);
     document.getElementById("btn-restart").addEventListener("click", restart);
     document.getElementById("btn-rules").addEventListener("click", rulesPage);
+    document.getElementById("rules").addEventListener("click", rulesPage);
+
 
 }
 
