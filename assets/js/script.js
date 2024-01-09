@@ -10,8 +10,6 @@ let playerSum = 0;
 let playerAces = 0;
 let playerCanHit = true; // set parameter to check if player has sum >21
 
-let displayResult = false; // set parameter to check if result for displaying current game
-
 window.onload = function() {
     mainFunction();
 };
@@ -37,7 +35,7 @@ function mainFunction() {
     //console.log("Dealer aces "+dealerAces); // debug purposes to be removed
     let dealerVisibleImg = document.createElement("img");
     dealerVisibleImg.src = "./assets/images/" + dealerVisible + ".webp";
-    dealerVisibleImg.alt = dealerVisible + " Card";
+    dealerVisibleImg.alt = dealerVisibleImg + " Card";
     document.getElementById("dealer-cards").append(dealerVisibleImg);
 
     // Pick 2 Player Cards
@@ -156,14 +154,11 @@ function stay(){
         document.getElementById("results").style.color = "#6AC425";
     }  
     
-    // Check to avoid multiple clicks on stay
-    if (displayResult===false){
-        document.getElementById("dealer-score").append("Dealer Score: " + dealerSum);
-        document.getElementById("player-score").append("Player Score: " + playerSum);
-        document.getElementById("results").append(gameResult);
-        document.getElementById("btn-restart").style.display = '';
-        displayResult=true;
-    }   
+    document.getElementById("dealer-score").innerText = "Dealer Score: " + dealerSum;
+    document.getElementById("player-score").innerText = "Player Score: " + playerSum;
+    document.getElementById("results").innerText = gameResult;
+    document.getElementById("btn-restart").style.display = '';
+
 }
 
 function dealerHit(){
