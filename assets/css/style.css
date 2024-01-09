@@ -45,6 +45,15 @@ body img {
     border-radius: 1rem;
 }
 
+#rules {
+    position:absolute;    
+    top: 6rem;
+    padding: 0.5rem;
+    z-index: 3;
+    text-align: left;
+    background-color: #797567;
+}  
+
 /* End of Main Content */
 
 /* Header */
