@@ -103,18 +103,22 @@ function stay(){
     let gameResult="";
     if (playerSum>21){
         gameResult = "Player lose!";
+        document.getElementById("results").style.color="red";
     } 
     else if (dealerSum > 21){
         gameResult = "Player Win!";
+        document.getElementById("results").style.color="green";
     } 
     else if (dealerSum == playerSum){
         gameResult = "It's a Tie!";
     }
     else if (dealerSum > playerSum){
         gameResult = "Player Lose!";
+        document.getElementById("results").style.color="red";
     }
     else if (dealerSum < playerSum){
         gameResult = "Player Win!";
+        document.getElementById("results").style.color="green";
     }  
     
     // Check to avoid multiple clicks on stay
