@@ -22,6 +22,9 @@ function mainFunction() {
     // Pick Dealer Hidden Card and add to Dealer sum
     dealerHidden = deck.splice([Math.floor(Math.random() * deck.length)],1);
     dealerSum += getCardValue(dealerHidden);
+    dealerAces += checkCardForAce(dealerHidden);
+    console.log("Dealer hidden "+dealerHidden); // debug purposes to be removed
+    console.log("Dealer aces "+dealerAces); // debug purposes to be removed
 
     // Update Dealer hidden card image src
     document.getElementById("dealerHidden").src = "./assets/images/cardback.webp";
@@ -29,6 +32,8 @@ function mainFunction() {
     // Pick Dealer Visible Card and put it on the play area
     let dealerVisible = deck.splice([Math.floor(Math.random() * deck.length)],1);
     dealerSum += getCardValue(dealerVisible);
+    dealerAces += checkCardForAce(dealerVisible);
+    console.log("Dealer aces "+dealerAces); // debug purposes to be removed
     let dealerVisibleImg = document.createElement("img");
     dealerVisibleImg.src = "./assets/images/" + dealerVisible + ".webp";
     document.getElementById("dealer-cards").append(dealerVisibleImg);
@@ -40,7 +45,7 @@ function mainFunction() {
         playerCardImg.src = "./assets/images/" + playerCard + ".webp";
         playerSum += getCardValue(playerCard);
         playerAces += checkCardForAce(playerCard);
-        console.log("Player Aces:" + playerAces);
+        console.log("Player Aces:" + playerAces); // debug purposes to be removed
         document.getElementById("player-cards").append(playerCardImg);
     }
     document.getElementById("btn-hit").addEventListener("click", playerHit);
@@ -79,6 +84,15 @@ function getCardValue(card){
     }
 }
 
+function checkCardForAce(card){
+    let data = card[0].split("-"); // get digits before "-"  
+    if (data[0] == "a"){
+        return 1;
+    } else {
+        return 0;
+    }    
+}
+
 function playerHit(){
     if (playerCanHit == false){
         return;
@@ -88,7 +102,7 @@ function playerHit(){
     playerCard.src = "./assets/images/" + card + ".webp";
     playerSum += getCardValue(card);
     playerAces += checkCardForAce(card);
-    console.log("Player Aces:" + playerAces);
+    console.log("Player Aces:" + playerAces); // debug purposes to be removed
     document.getElementById("player-cards").append(playerCard);
     if (playerSum > 21){
         playerCanHit = false;
@@ -96,16 +110,6 @@ function playerHit(){
         stay();
     }
     //debugger
-}
-
-function checkCardForAce(card){
-    let data = card[0].split("-"); // get digits before "-"  
-    if (data[0] == "a"){
-        return 1;
-    } else {
-        return 0;
-    }
-    
 }
 
 function stay(){
@@ -156,6 +160,7 @@ function dealerHit(){
     let card = deck.splice([Math.floor(Math.random() * deck.length)],1);
     dealerCard.src = "./assets/images/" + card + ".webp";
     dealerSum += getCardValue(card);
+    dealerAces += checkCardForAce(card);
     document.getElementById("dealer-cards").append(dealerCard);
     if (dealerSum > 21){
         dealerCanHit = false;
