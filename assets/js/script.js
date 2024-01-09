@@ -112,22 +112,15 @@ function playerHit(){
     playerCard.src = "./assets/images/" + card + ".webp";
     document.getElementById("player-cards").append(playerCard);   
     playerSum += getCardValue(card);
-    //console.log("Player Aces:" + playerAces); // debug purposes to be removed
-    //console.log("Player Sum before Aces:" + playerSum); // debug purposes to be removed
     playerAces += checkCardForAce(card);
     let playerNewSum = sumWithAces(playerSum,playerAces);
     playerSum = playerNewSum.newSum;
     playerAces = playerNewSum.aceCount;
-    //console.log("Player Sum after Aces:" + playerNewSum.newSum); // debug purposes to be removed
-    //console.log("Aces Sum after Aces:" + playerNewSum.aceCount); // debug purposes to be removed
-    //debugger
-
     if (playerSum > 21){
         playerCanHit = false;
         // call stay function as the game ends
         stay();
     }
-    //debugger
 }
 
 function stay(){
@@ -180,6 +173,9 @@ function dealerHit(){
     dealerSum += getCardValue(card);
     dealerAces += checkCardForAce(card);
     document.getElementById("dealer-cards").append(dealerCard);
+    let dealerNewSum = sumWithAces(dealerSum,dealerAces);
+    dealerSum = dealerNewSum.newSum;
+    dealerAces = dealerNewSum.aceCount;
     if (dealerSum > 21){
         dealerCanHit = false;
     }
