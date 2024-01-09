@@ -33,7 +33,7 @@ function mainFunction() {
     let dealerVisible = deck.splice([Math.floor(Math.random() * deck.length)],1);
     dealerSum += getCardValue(dealerVisible);
     dealerAces += checkCardForAce(dealerVisible);
-    console.log("Dealer aces "+dealerAces); // debug purposes to be removed
+    //console.log("Dealer aces "+dealerAces); // debug purposes to be removed
     let dealerVisibleImg = document.createElement("img");
     dealerVisibleImg.src = "./assets/images/" + dealerVisible + ".webp";
     document.getElementById("dealer-cards").append(dealerVisibleImg);
@@ -45,7 +45,7 @@ function mainFunction() {
         playerCardImg.src = "./assets/images/" + playerCard + ".webp";
         playerSum += getCardValue(playerCard);
         playerAces += checkCardForAce(playerCard);
-        console.log("Player Aces:" + playerAces); // debug purposes to be removed
+        //console.log("Player Aces:" + playerAces); // debug purposes to be removed
         document.getElementById("player-cards").append(playerCardImg);
     }
     document.getElementById("btn-hit").addEventListener("click", playerHit);
@@ -93,6 +93,16 @@ function checkCardForAce(card){
     }    
 }
 
+function sumWithAces(currentSum,aceCount){
+    while (currentSum > 21 && aceCount > 0){
+        currentSum -= 10;
+        aceCount -= 1;
+    }
+    return {
+        "newSum":currentSum,
+        "aceCount":0};
+}
+
 function playerHit(){
     if (playerCanHit == false){
         return;
@@ -100,10 +110,18 @@ function playerHit(){
     let playerCard = document.createElement("img");
     let card = deck.splice([Math.floor(Math.random() * deck.length)],1);
     playerCard.src = "./assets/images/" + card + ".webp";
+    document.getElementById("player-cards").append(playerCard);   
     playerSum += getCardValue(card);
+    //console.log("Player Aces:" + playerAces); // debug purposes to be removed
+    //console.log("Player Sum before Aces:" + playerSum); // debug purposes to be removed
     playerAces += checkCardForAce(card);
-    console.log("Player Aces:" + playerAces); // debug purposes to be removed
-    document.getElementById("player-cards").append(playerCard);
+    let playerNewSum = sumWithAces(playerSum,playerAces);
+    playerSum = playerNewSum.newSum;
+    playerAces = playerNewSum.aceCount;
+    //console.log("Player Sum after Aces:" + playerNewSum.newSum); // debug purposes to be removed
+    //console.log("Aces Sum after Aces:" + playerNewSum.aceCount); // debug purposes to be removed
+    //debugger
+
     if (playerSum > 21){
         playerCanHit = false;
         // call stay function as the game ends
