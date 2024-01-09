@@ -131,7 +131,7 @@ function stay(){
     playerCanHit = false;
     document.getElementById("dealerHidden").src = "./assets/images/" + dealerHidden + ".webp";
     // Dealer must have at least 17
-    if (playerSum <21){
+    if (playerSum <= 21){
         while (dealerSum < 17) {
         dealerHit();
         }
