@@ -28,6 +28,7 @@ function mainFunction() {
 
     // Update Dealer hidden card image src
     document.getElementById("dealerHidden").src = "./assets/images/cardback.webp";
+    document.getElementById("dealerHidden").alt =  "Dealer Hidden Card";
 
     // Pick Dealer Visible Card and put it on the play area
     let dealerVisible = deck.splice([Math.floor(Math.random() * deck.length)],1);
@@ -36,6 +37,7 @@ function mainFunction() {
     //console.log("Dealer aces "+dealerAces); // debug purposes to be removed
     let dealerVisibleImg = document.createElement("img");
     dealerVisibleImg.src = "./assets/images/" + dealerVisible + ".webp";
+    dealerVisibleImg.alt = dealerVisible + " Card";
     document.getElementById("dealer-cards").append(dealerVisibleImg);
 
     // Pick 2 Player Cards
@@ -43,6 +45,7 @@ function mainFunction() {
         let playerCardImg = document.createElement("img");
         let playerCard = deck.splice([Math.floor(Math.random() * deck.length)],1);
         playerCardImg.src = "./assets/images/" + playerCard + ".webp";
+        playerCardImg.alt = playerCard + " Card";
         playerSum += getCardValue(playerCard);
         playerAces += checkCardForAce(playerCard);
         //console.log("Player Aces:" + playerAces); // debug purposes to be removed
