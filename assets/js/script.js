@@ -49,6 +49,8 @@ function mainFunction() {
         //console.log("Player Aces:" + playerAces); // debug purposes to be removed
         document.getElementById("player-cards").append(playerCardImg);
     }
+    document.getElementById("player-score").innerText = "Player Score: " + playerSum;
+
     document.getElementById("btn-hit").addEventListener("click", playerHit);
     document.getElementById("btn-stay").addEventListener("click", stay);
     document.getElementById("btn-restart").addEventListener("click", restart);
@@ -122,6 +124,7 @@ function playerHit(){
         // call stay function as the game ends
         stay();
     }
+    document.getElementById("player-score").innerText = "Player Score: " + playerSum;
 }
 
 function stay(){
