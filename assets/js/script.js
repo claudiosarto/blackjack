@@ -54,6 +54,8 @@ function mainFunction() {
     document.getElementById("btn-hit").addEventListener("click", playerHit);
     document.getElementById("btn-stay").addEventListener("click", stay);
     document.getElementById("btn-restart").addEventListener("click", restart);
+    document.getElementById("btn-rules").addEventListener("click", rulesPage);
+
 }
 
 function buildDeck(){
@@ -208,4 +210,13 @@ function restart(){
     document.getElementById("player-score").innerHTML="";
     document.getElementById("results").innerHTML="";
     mainFunction();
+}
+
+function rulesPage(){
+    let display = document.getElementById("rules").style.display;
+    if (display == "none" || display == "") {
+        document.getElementById("rules").style.display = "block"; 
+    }else if (display == "block"){
+        document.getElementById("rules").style.display = "none"; 
+    }
 }

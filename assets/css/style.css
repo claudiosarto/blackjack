@@ -46,6 +46,7 @@ body img {
 }
 
 #rules {
+    display: none;
     position:absolute;    
     top: 6rem;
     padding: 0.5rem;
