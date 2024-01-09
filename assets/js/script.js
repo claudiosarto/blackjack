@@ -203,6 +203,8 @@ function restart(){
     deck = buildDeck();
     dealerSum = 0;
     playerSum = 0;
+    dealerAces = 0;
+    playerAces = 0;
     dealerHidden = "";
     playerCanHit = true; 
     dealerCanHit = true;
