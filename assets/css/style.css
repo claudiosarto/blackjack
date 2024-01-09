@@ -47,11 +47,12 @@ body img {
 
 #rules {
     display: none;
-    position:absolute;    
-    top: 6rem;
+    position:absolute;  
+    top: 7rem;
     padding: 0.5rem;
     z-index: 3;
     text-align: left;
+    font-size: 1.5rem;
     background-color: #797567;
 }  
 
