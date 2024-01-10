@@ -21,8 +21,6 @@ function mainFunction() {
     dealerHidden = deck.splice([Math.floor(Math.random() * deck.length)],1);
     dealerSum += getCardValue(dealerHidden);
     dealerAces += checkCardForAce(dealerHidden);
-    console.log("Dealer hidden "+dealerHidden); // debug purposes to be removed
-    console.log("Dealer aces "+dealerAces); // debug purposes to be removed
 
     // Update Dealer hidden card image src
     document.getElementById("dealerHidden").src = "./assets/images/cardback.webp";
@@ -32,7 +30,6 @@ function mainFunction() {
     let dealerVisible = deck.splice([Math.floor(Math.random() * deck.length)],1);
     dealerSum += getCardValue(dealerVisible);
     dealerAces += checkCardForAce(dealerVisible);
-    //console.log("Dealer aces "+dealerAces); // debug purposes to be removed
     let dealerVisibleImg = document.createElement("img");
     dealerVisibleImg.src = "./assets/images/" + dealerVisible + ".webp";
     dealerVisibleImg.alt = dealerVisibleImg + " Card";
@@ -46,18 +43,16 @@ function mainFunction() {
         playerCardImg.alt = playerCard + " Card";
         playerSum += getCardValue(playerCard);
         playerAces += checkCardForAce(playerCard);
-        //console.log("Player Aces:" + playerAces); // debug purposes to be removed
         document.getElementById("player-cards").append(playerCardImg);
     }
     document.getElementById("player-score").innerText = "Player Score: " + playerSum;
+    // Set all buttons for click event
 
     document.getElementById("btn-hit").addEventListener("click", playerHit);
     document.getElementById("btn-stay").addEventListener("click", stay);
     document.getElementById("btn-restart").addEventListener("click", restart);
     document.getElementById("btn-rules").addEventListener("click", rulesPage);
     document.getElementById("rules").addEventListener("click", rulesPage);
-
-
 }
 
 function buildDeck(){
@@ -213,7 +208,7 @@ function restart(){
     playerCanHit = true; 
     dealerCanHit = true;
     displayResult = false; 
-    // reset score and result area
+    // reset score and results area
     document.getElementById("dealer-score").innerHTML="";
     document.getElementById("player-score").innerHTML="";
     document.getElementById("results").innerHTML="";
