@@ -9,7 +9,7 @@ html {
 
 /* Main Content */
 main{
-    min-height: 100vh;
+    min-height: 90vh;
     padding-top: 5rem;
 }
 
@@ -99,6 +99,7 @@ body img {
 
 /* footer */
 .footer {
+    position: fixed;
     display: flex;
     bottom:0;
     width: 100%;
