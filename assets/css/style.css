@@ -70,8 +70,11 @@ body img {
     top: 45%;
     align-content: center;
     border-radius: 1rem;
-    width: 50vw;
-    left: 25%;
+    width: 35rem;
+    margin-left:auto;
+    margin-right:auto;
+    left: 0;
+    right: 0;
     text-shadow: 2px 1px #3C382C;  
     background-color: #B0ADA2;
 }
