@@ -130,7 +130,7 @@ body img {
         font-size: 3.5rem;
     }
 
-    .social-networks-link:hover {
+    .social-networks-link:hover, #btn-rules:hover{
         color: whitesmoke;
     }
 } 
