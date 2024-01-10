@@ -61,7 +61,20 @@ body img {
     text-align: left;
     font-size: 1.5rem;
     background-color: #797567;
+    text-shadow: 1px 1px #3C382C;
 }  
+
+#results-wrapper{
+    display:none;
+    position: absolute;
+    top: 45%;
+    align-content: center;
+    border-radius: 1rem;
+    width: 50vw;
+    left: 25%;
+    text-shadow: 2px 1px #3C382C;  
+    background-color: #B0ADA2;
+}
 
 /* End of Main Content */
 

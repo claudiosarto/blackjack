@@ -145,29 +145,33 @@ function stay(){
     let gameResult="";
     if (playerSum>21){
         gameResult = "Player lose!";
-        document.getElementById("results").style.color = "red";
+        document.getElementById("results").style.color = "#800000";
+        document.getElementById("results-wrapper").style.display = "block";
     } 
     else if (dealerSum > 21){
         gameResult = "Player Win!";
-        document.getElementById("results").style.color = "#6AC425";
+        document.getElementById("results").style.color = "#3cb371";
+        document.getElementById("results-wrapper").style.display = "block";
     } 
     else if (dealerSum == playerSum){
         gameResult = "It's a Tie!";
+        document.getElementById("results-wrapper").style.display = "block";
     }
     else if (dealerSum > playerSum){
         gameResult = "Player Lose!";
-        document.getElementById("results").style.color = "red";
+        document.getElementById("results").style.color = "#800000";
+        document.getElementById("results-wrapper").style.display = "block";
     }
     else if (dealerSum < playerSum){
         gameResult = "Player Win!";
-        document.getElementById("results").style.color = "#6AC425";
+        document.getElementById("results").style.color = "#800000";
+        document.getElementById("results-wrapper").style.display = "block";
     }  
     
     document.getElementById("dealer-score").innerText = "Dealer Score: " + dealerSum;
     document.getElementById("player-score").innerText = "Player Score: " + playerSum;
     document.getElementById("results").innerText = gameResult;
     document.getElementById("btn-restart").style.display = '';
-
 }
 
 function dealerHit(){
@@ -213,6 +217,7 @@ function restart(){
     document.getElementById("dealer-score").innerHTML="";
     document.getElementById("player-score").innerHTML="";
     document.getElementById("results").innerHTML="";
+    document.getElementById("results-wrapper").style.display = "";
     mainFunction();
 }
 
