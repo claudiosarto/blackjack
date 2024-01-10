@@ -19,11 +19,11 @@ body {
     margin-top: 2rem;
     font-family: "Pirata One", sans-serif;
     font-size: 2rem;
-    color: #3C382C;
+    color: whitesmoke;
     text-align: center;
     display:flex;
     flex-direction: column;
-    background-color: #797567;
+    background-color: #3C382C;
 }
 
 h1 {
