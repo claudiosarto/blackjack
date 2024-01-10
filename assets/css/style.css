@@ -126,6 +126,10 @@ body img {
         color: #B0ADA2;
     }
 
+    .social-networks-link{
+        font-size: 3.5rem;
+    }
+
     .social-networks-link:hover {
         color: whitesmoke;
     }
