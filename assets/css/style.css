@@ -49,7 +49,7 @@ body img {
     display: none;
     position:absolute;  
     top: 7rem;
-    padding: 0.5rem;
+    padding: 0 2.5rem;
     z-index: 3;
     text-align: left;
     font-size: 1.5rem;
@@ -115,6 +115,9 @@ body img {
     
     body img {
         width: 15vh;
-        padding: .5rem;}       
-
+        padding: .5rem;}      
+    
+    #rules p, ul, ol, li{
+            font-size: 2rem;
+    } 
 } 
