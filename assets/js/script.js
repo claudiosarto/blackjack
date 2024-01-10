@@ -145,11 +145,12 @@ function stay(){
     } 
     else if (dealerSum > 21){
         gameResult = "Player Win!";
-        document.getElementById("results").style.color = "#3cb371";
+        document.getElementById("results").style.color = "#3CB371";
         document.getElementById("results-wrapper").style.display = "block";
     } 
     else if (dealerSum == playerSum){
         gameResult = "It's a Tie!";
+        document.getElementById("results").style.color = "#3C382C";
         document.getElementById("results-wrapper").style.display = "block";
     }
     else if (dealerSum > playerSum){
