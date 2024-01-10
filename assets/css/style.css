@@ -43,6 +43,13 @@ body img {
     margin:1rem;
     padding:1rem;
     border-radius: 1rem;
+    transition:0s 0.15s;
+}
+
+.buttons:hover, .buttons:active {
+    background-color: #3C382C;
+    color: #B0ADA2;
+    transition:0s;
 }
 
 #rules {
