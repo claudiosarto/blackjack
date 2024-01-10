@@ -111,6 +111,10 @@ body img {
 
     div, p {
         font-size: 3rem;
-    }      
+    }
+    
+    body img {
+        width: 15vh;
+        padding: .5rem;}       
 
 } 
