@@ -39,7 +39,7 @@ body img {
     font-family: "Pirata One", sans-serif;
     font-size: 3rem;
     background-color: #B0ADA2;
-    border-color: #3C382C;
+    border-color: whitesmoke;
     margin:1rem;
     padding:1rem;
     border-radius: 1rem;
@@ -119,5 +119,10 @@ body img {
     
     #rules p, ul, ol, li{
             font-size: 2rem;
-    } 
+    }
+    
+    .buttons:hover {
+        background-color: #3C382C;
+        color: #B0ADA2;
+    }
 } 
