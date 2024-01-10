@@ -127,8 +127,6 @@ body img {
     }
 
     .social-networks-link:hover {
-        background-color: #3C382C;
-        color: #B0ADA2;
-        box-shadow: 0px 0px 4px 1px  whitesmoke;
+        color: whitesmoke;
     }
 } 
