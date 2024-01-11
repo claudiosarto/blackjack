@@ -12,6 +12,8 @@ Welcome to online blackjack! Challenge the dealer, aim for 21, and enjoy the exc
 ### Existing Features
 
 ### Future Features left to Implement
+- Add counter for wins/losses
+- Add option to bet with fiches
 
 ## Design  
 
@@ -109,7 +111,7 @@ Following bug has been observed on Firefox browser in relation to JavaScript, bu
 
 ### Credits
 
-- Cards Image are from [Freepik](http://www.freepik.com) and Designed by brgfx / Freepik
+- Cards Images are from [Freepik](http://www.freepik.com) and Designed by brgfx / Freepik
 - I used the following [Youtube tutorial by Kenny Yip Coding](https://www.youtube.com/watch?v=bMYCWccL-3U) to have an understanding of the logic and some code has been taken from there.
 
 ### Acknowledgments
