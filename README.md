@@ -17,17 +17,20 @@ A "mobile-first" approach has been used for design the site so initially for mob
 
 ### Wireframes
 Wireframes created for mobile, tablet and desktop.
-<Mobile TBD>
-<Tablet TBD>
-<Desktop TBD>
+- > placeholder Mobile <
+- > placeholder Tablet <
+- > placeholder Desktop <
 
 ### Color Scheme
 
 Color scheme has been defined using [Paletton](https://paletton.com/) tool
 
-- Header and footer background: `#<TBD>`
-- Header and footer font/icons color: `#<TBD>`
-- Content background color for all pages: `#<TBD>` 
+- Header and footer background: `#B0ADA2`
+- Header and footer font/icons color: `#3C382C`
+- Main Content background color: `#3C382C` 
+- Main Content font color: `#f5f5f5` 
+
+![Color Scheme](docs/blackjack-color-scheme.png)
 
 ## Technologies Used
 
