@@ -103,7 +103,7 @@ Following bug has been observed on Firefox browser in relation to JavaScript, bu
 ### Credits
 
 - Inspiration for the layout from the walthrough project "Love Math" from Code institute
-- I used the following [Youtube tutorial by Kenny Yip Coding] (https://www.youtube.com/watch?v=bMYCWccL-3U) to have an understanding of the logic and some code has been taken from there
+- I used the following [Youtube tutorial by Kenny Yip Coding](https://www.youtube.com/watch?v=bMYCWccL-3U) to have an understanding of the logic and some code has been taken from there.
 
 ### Acknowledgments
 
