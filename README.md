@@ -4,6 +4,9 @@
 
 ![Responsice Mockup](docs/blackjack-responsive-mockup.png) 
 
+
+Welcome to online blackjack! Challenge the dealer, aim for 21, and enjoy the excitement of the "17 rule." Realistic graphics and quick gameplay for maximum casino thrill! Good luck!
+
 ## Features
 
 ### Existing Features
@@ -99,7 +102,6 @@ Following bug has been observed on Firefox browser in relation to JavaScript, bu
 ### Content  
 
 - Rules section has been generated with the help of [ChatGPT](https://chat.openai.com/). Content has been checked for antiplagiarism on using [Quetext](https://www.quetext.com/), report available at this [link](https://www.quetext.com/results/89e36fa13822ef58ab17) 
-- Cards Image are from [Freepik](http://www.freepik.com) and Designed by brgfx / Freepik
 - FavIcon has been generated using GenAI embedded in [Microsoft Designer](https://designer.microsoft.com/) - [T&C](https://designer.microsoft.com/termsOfUse.pdf) and converted using [Favicon] (https://favicon.io/)
 - Icons from [Font Awesome](https://fontawesome.com/)
 - Fonts from [Google Fonts](https://fonts.google.com/)
@@ -107,7 +109,7 @@ Following bug has been observed on Firefox browser in relation to JavaScript, bu
 
 ### Credits
 
-- Inspiration for the layout from the walthrough project "Love Math" from Code institute
+- Cards Image are from [Freepik](http://www.freepik.com) and Designed by brgfx / Freepik
 - I used the following [Youtube tutorial by Kenny Yip Coding](https://www.youtube.com/watch?v=bMYCWccL-3U) to have an understanding of the logic and some code has been taken from there.
 
 ### Acknowledgments
