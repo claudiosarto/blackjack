@@ -88,4 +88,23 @@ To clone the repository:
 Please refer to ![BlackJack Testing](/TESTING.md) page for the performed tests.
 
 ### Known Bugs
-Following bug has been observed on Firefox browser in relation to JavaScript, but not present in Chrome and Edge
+Following bug has been observed on Firefox browser in relation to JavaScript, but not present in Chrome and Edge:
+<insert img here> 
+
+### Content  
+
+- Rules section has been generated with the help of [ChatGPT](https://chat.openai.com/). Content has been checked for antiplagiarism on using [Quetext](https://www.quetext.com/), report available at this [link](https://www.quetext.com/results/89e36fa13822ef58ab17) 
+- Cards Image are from [Freepik](http://www.freepik.com) and Designed by brgfx / Freepik
+- FavIcon has been generated using GenAI embedded in [Microsoft Designer](https://designer.microsoft.com/) - [T&C](https://designer.microsoft.com/termsOfUse.pdf) and converted using [Favicon] (https://favicon.io/)
+- Icons from [Font Awesome](https://fontawesome.com/)
+- Fonts from [Google Fonts](https://fonts.google.com/)
+- [W3Schools](https://www.w3schools.com/) and [Stack Overflow](https://stackoverflow.com/) for some HTML/CSS features
+
+### Credits
+
+- Inspiration for the layout from the walthrough project "love Running" from Code institute
+- Some CSS tecniques (e.g. basic styling on html and body elements) have been reused from walkthrough project "Grand Hotel" from [Udemy - CSS Bootcamp - Master CSS (CSS Grid / CSS Flexbox)](https://www.udemy.com/course/css-bootcamp-master-in-css-including-css-grid-flexbox/) 
+
+### Acknowledgments
+
+I'd like to thank my mentor Jubril Akolade for giving me hints and tips during the project.
