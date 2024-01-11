@@ -160,7 +160,7 @@ function stay(){
     }
     else if (dealerSum < playerSum){
         gameResult = "Player Win!";
-        document.getElementById("results").style.color = "#800000";
+        document.getElementById("results").style.color = "#3CB371";
         document.getElementById("results-wrapper").style.display = "block";
     }  
     

@@ -14,7 +14,10 @@
 A "mobile-first" approach has been used for design the site so initially for mobile devices, prioritizing functionality and user experience on smaller screens. Then using media query function to increase fonts and arrange the content for bigger screens. 
 
 ### Wireframes
-Wireframes created for mobile, tabled and desktop.
+Wireframes created for mobile, tablet and desktop.
+<Mobile TBD>
+<Tablet TBD>
+<Desktop TBD>
 
 ### Color Scheme
 
@@ -74,7 +77,15 @@ To fork the repository:
 To clone the repository:
 
 1. Log in (or sign up) to GitHub.
-2. Go to the repository for this project, [Lasagna-pedia](https://github.com/claudiosarto/lasagna-pedia)
+2. Go to the repository for this project, [BlackJack](https://github.com/claudiosarto/blackjack)
 3. Click on the code button, select whether you would like to clone with HTTPS, SSH or GitHub CLI and copy the link shown.
 4. Open the terminal in your code editor and change the current working directory to the location you want to use for the cloned directory.
 5. Type 'git clone' into the terminal and then paste the link you copied in step 3. Press enter.
+
+## Testing  
+
+### Manual Testing 
+Please refer to ![BlackJack Testing](/TESTING.md) page for the performed tests.
+
+### Known Bugs
+Following bug has been observed on Firefox browser in relation to JavaScript, but not present in Chrome and Edge
