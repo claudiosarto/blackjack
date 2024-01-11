@@ -2,6 +2,8 @@
 
 [Visit the live website link](https://claudiosarto.github.io/blackjack/index.html)
 
+![Responsice Mockup](docs/blackjack-responsive-mockup.png) 
+
 ## Features
 
 ### Existing Features
