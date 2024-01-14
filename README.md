@@ -20,11 +20,14 @@ The main game area is where all the interaction happens. On the upper part user 
 Current player score is displayed as well, so the user doesn't have to make the calculation.
 ![Main Game Area](docs/blackjack-main-game-area.png)
 
-__Hit Button__  
-
-__Stay Button__ 
+__Hit and Stay Buttons__  
+- Hit button will allow the player to pick an additional card and it gets added to the player cards area. In case the player cards go over 21, current game ends. 
+- Stay button will allow the player to stay with current score. Then the dealer will make the move and results are calculated and current game ends.
+![Footer](docs/blackjack-hit-stay-buttons.png)
 
 __Restart Game Button__  
+Restart game button appears once the game ends and allows the player to start over a new game.
+![Footer](docs/blackjack-restart-button.png)
 
 __Footer__  
 The footer has links to social media contacts.
