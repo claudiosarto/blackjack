@@ -51,8 +51,6 @@ Testing performed on the following devices:
 | Hide Rules                      | Click the ? icon when rules are visible                 | Rules disappear    | Rules disappear                       | Pass      |
 | Hide Rules                      | Click anywhere in the rules area when rules are visible | Rules disappear    | Rules disappear                       | Pass      |
 | Mouse Hover on ? Icon (Desktop) | Hover on ? icon                                         | Icons change color | Icon change color when hovering mouse | Pass      |
-|                                 |                                                         |                    |                                       |           |
-
 
 #### Game Area
 
