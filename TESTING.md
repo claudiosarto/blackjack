@@ -44,4 +44,28 @@ Testing performed on the following devices:
     - Firefox
     - Microsoft Edge (Laptop only)
 
-#### Home Page
+#### Header
+| Feature    | Testing Performed                                       | Expected Result  | Result               | Pass/Fail |
+|------------|---------------------------------------------------------|------------------|----------------------|-----------|
+| Show Rules | Click the ? icon                                        | Rules pop up     | Rules become visible | Pass      |
+| Hide Rules |  Click the ? icon when rules are visible                | Rules disappear  | Rules disappear      | Pass      |
+| Hide Rules | Click anywhere in the rules area when rules are visible | Rules disappear  | Rules disappear      | Pass      |
+| Mouse Hover on ? Icon (Desktop)  | Icons change color  | Hover on ? icon  | Icon change color when hovering mouse  | Pass |
+
+#### Game Area
+
+| Feature              | Expected Outcome                                           | Testing Performed                               | Result                                                                                                                                                 | Pass/Fail |
+|----------------------|------------------------------------------------------------|-------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|-----------|
+| Hit Button           | Player gets a card                                         | Click hit button                                | A new card is added to Player Cards area                                                                                                               | Pass      |
+| Player Score Counter | After click the hit button player cards sum is calculated  | Correct player cards sum is updated             | Correct player cards sum is updated                                                                                                                    | Pass      |
+| Stay Button          | Click stay button                                          | Game results are calculated and you get a popup | Hidden dealer card is revealed, dealer add additional cards to the hand to get at least 17,  results are calculated and a popup with win/loss shows up | Pass      |
+| Results Area         | Click stay button                                          | After clicking stay, dealer score shows up      | Dealer sum shows after player score                                                                                                                    | Pass      |
+| Restart Game Button  | After results pop up is visible, click restart game button | A new game begins                               | New game starts with new cards                                                                                                                         | Pass      |
+
+
+#### Footer
+| Feature    | Testing Performed                                       | Expected Result  | Result               | Pass/Fail |
+|------------|---------------------------------------------------------|------------------|----------------------|-----------|
+| Footer Social Media Links                           | Open related social media page  | Check every social media link opening in a new tab     | All links open respective social media site in a separate tab  | Pass |
+| Footer Mouse Hover on Social Media Icons (Desktop)  | Icons change color              | Hover on every social media link opening in a new tab  | Each icon change color when hovering mouse                     | Pass |
+
