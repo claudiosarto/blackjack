@@ -15,6 +15,11 @@ __Navigation Bar__
 This structure provides a ? button to easily find instructions on how to play
 ![Navigation Bar](docs/blackjack-navigation-bar.png)
 
+__Main Game Area__  
+The main game area is where all the interaction happens. On the upper part user can see Dealer's cards, whiel in the bottom part user has his/her cards.
+Current player score is displayed as well, so the user doesn't have to make the calculation.
+![Main Game Area](docs/blackjack-main-game-area.png)
+
 __Hit Button__  
 
 __Stay Button__ 
