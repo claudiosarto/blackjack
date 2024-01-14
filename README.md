@@ -11,6 +11,20 @@ Welcome to online blackjack! Challenge the dealer, aim for 21, and enjoy the exc
 
 ### Existing Features
 
+__Navigation Bar__  
+This structure provides a ? button to easily find instructions on how to play
+![Navigation Bar](docs/blackjack-navigation-bar.png)
+
+__Hit Button__  
+
+__Stay Button__ 
+
+__Restart Game Button__  
+
+__Footer__  
+The footer has links to social media contacts.
+![Footer](docs/blackjack-footer.png)
+
 ### Future Features left to Implement
 - Add counter for wins/losses
 - Add option to bet with fiches
@@ -102,7 +116,7 @@ To clone the repository:
 Please refer to ![BlackJack Testing](/TESTING.md) page for the performed tests.
 
 ### Known Bugs
-Following bug has been observed on Firefox browser while inspecting the page, but not present in Chrome and Edge.
+Following error has been observed on Firefox browser while inspecting the page, but not present in Chrome and Edge.
 However it doesn't affect the page functionality.
 ![Firefox JS Bug](docs/blackjack-js-firefox-bug.png)
 
