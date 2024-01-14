@@ -45,18 +45,20 @@ Testing performed on the following devices:
     - Microsoft Edge (Laptop only)
 
 #### Header
-| Feature    | Testing Performed                                       | Expected Result  | Result               | Pass/Fail |
-|------------|---------------------------------------------------------|------------------|----------------------|-----------|
-| Show Rules | Click the ? icon                                        | Rules pop up     | Rules become visible | Pass      |
-| Hide Rules |  Click the ? icon when rules are visible                | Rules disappear  | Rules disappear      | Pass      |
-| Hide Rules | Click anywhere in the rules area when rules are visible | Rules disappear  | Rules disappear      | Pass      |
-| Mouse Hover on ? Icon (Desktop)  | Icons change color  | Hover on ? icon  | Icon change color when hovering mouse  | Pass |
+| Feature                         | Testing Performed                                       | Expected Result    | Result                                | Pass/Fail |
+|---------------------------------|---------------------------------------------------------|--------------------|---------------------------------------|-----------|
+| Show Rules                      | Click the ? icon                                        | Rules pop up       | Rules become visible                  | Pass      |
+| Hide Rules                      | Click the ? icon when rules are visible                 | Rules disappear    | Rules disappear                       | Pass      |
+| Hide Rules                      | Click anywhere in the rules area when rules are visible | Rules disappear    | Rules disappear                       | Pass      |
+| Mouse Hover on ? Icon (Desktop) | Hover on ? icon                                         | Icons change color | Icon change color when hovering mouse | Pass      |
+|                                 |                                                         |                    |                                       |           |
+
 
 #### Game Area
 
-| Feature              | Expected Outcome                                           | Testing Performed                               | Result                                                                                                                                                 | Pass/Fail |
+| Feature              | Testing Performed                                          | Expected Outcome                                | Result                                                                                                                                                 | Pass/Fail |
 |----------------------|------------------------------------------------------------|-------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|-----------|
-| Hit Button           | Player gets a card                                         | Click hit button                                | A new card is added to Player Cards area                                                                                                               | Pass      |
+| Hit Button           | Click hit button                                           | Player gets a card                              | A new card is added to Player Cards area                                                                                                               | Pass      |
 | Player Score Counter | After click the hit button player cards sum is calculated  | Correct player cards sum is updated             | Correct player cards sum is updated                                                                                                                    | Pass      |
 | Stay Button          | Click stay button                                          | Game results are calculated and you get a popup | Hidden dealer card is revealed, dealer add additional cards to the hand to get at least 17,  results are calculated and a popup with win/loss shows up | Pass      |
 | Results Area         | Click stay button                                          | After clicking stay, dealer score shows up      | Dealer sum shows after player score                                                                                                                    | Pass      |
