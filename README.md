@@ -102,8 +102,11 @@ To clone the repository:
 Please refer to ![BlackJack Testing](/TESTING.md) page for the performed tests.
 
 ### Known Bugs
-Following bug has been observed on Firefox browser in relation to JavaScript, but not present in Chrome and Edge:
-<insert img here> 
+Following bug has been observed on Firefox browser while inspecting the page, but not present in Chrome and Edge.
+However it doesn't affect the page functionality.
+![Firefox JS Bug](docs/blackjack-js-firefox-bug.png)
+
+No other bugs bugs have been found during the implementation, deployment and testing.
 
 ### Content  
 
