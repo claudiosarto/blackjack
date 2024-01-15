@@ -62,12 +62,11 @@ Color scheme has been defined using [Paletton](https://paletton.com/) tool
 - Main Content font color: `#f5f5f5` 
 
 ![Color Scheme](docs/blackjack-color-scheme.png)
+Color scheme has been defined using [Paletton](https://paletton.com/) tool
 
 ### Typography
 Google Fonts was used to import the "Pirata One" font to give a sort of ancient effect.
 ![Color Scheme](docs/blackjack-fonts.png)
-
-Color scheme has been defined using [Paletton](https://paletton.com/) tool
 
 ## Technologies Used
 
