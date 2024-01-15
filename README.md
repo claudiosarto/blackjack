@@ -63,6 +63,12 @@ Color scheme has been defined using [Paletton](https://paletton.com/) tool
 
 ![Color Scheme](docs/blackjack-color-scheme.png)
 
+### Typography
+Google Fonts was used to import the "Pirata One" font to give a sort of ancient effect.
+![Color Scheme](docs/blackjack-fonts.png)
+
+Color scheme has been defined using [Paletton](https://paletton.com/) tool
+
 ## Technologies Used
 
 ### Languages Used
@@ -124,11 +130,7 @@ To clone the repository:
 Please refer to ![BlackJack Testing](/TESTING.md) page for the performed tests.
 
 ### Known Bugs
-Following error has been observed on Firefox browser while inspecting the page, but not present in Chrome and Edge.
-However it doesn't affect the page functionality.
-![Firefox JS Bug](docs/blackjack-js-firefox-bug.png)
-
-No other bugs bugs have been found during the implementation, deployment and testing.
+No bugs bugs have been found during the implementation, deployment and testing.
 
 ### Content  
 
